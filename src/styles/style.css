@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --primary: #BB86FC;
+  --primary-variant: #3700B3;
+  --secondary: #03DAC6;
+  --background: #121212;
+  --surface: #121212;
+  --error: #CF6679;
+  --warning: #F39C12;
+  --on-background: #FFFFFF;
+  --on-background-grey: #c7c7c7;
+  --on-surface: #FFFFFF;
+}
+
+[data-theme="light"] {
+  --background: #DDDDDD;
+  --suface: #FFFFFF;
+  --on-background: #333333;
+  --on-background-grey: #6d6d6d;
+  --on-surface: #333333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* login & register */
+.login-page h2, .register-page h2 {
+  font-weight: normal;
+  background-color: transparent;
+}
+
+.login-input, .register-input, .contact-input {
+  margin-top: 16px;
+}
+
+.login-input input, .register-input input, .contact-input input {
+  display: block;
+  padding: 16px;
+  width: 100%;
+  margin: 8px 0;
+  font-size: 24px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.login-input button, .register-input button, .contact-input button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-size: 24px;
+  background-color: transparent;
+  border: 2px solid var(--on-background);
+  color: var(--on-background);
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* app-bar */
+a {
+  color: var(--on-background);
+  text-decoration: none;
+}
+
+
+.app-container {
+  color: var(--on-background);
+  background-color: var(--background);
+  min-height: 150vh;
+  transition: all ease-in-out 0.5s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.tambah h2{
+  text-align: center;
+}
+
+header .navigation ul li {
+  display: inline-block;
+  font-size: 24px;
+  margin: 0 8px;
+  text-decoration: none;
+  list-style-type: none;
+  
+}
+/* detail page */
+.card-body{
+  background-color:  var(--warning);;
+  border-radius: 10px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title h2{
+  color : var(--background);
+}
+
+/* homepage & card */
+.btn-add{
+  background-color: var(--background) ;
+  color: var(--on-background);
+  padding: 10px;
+  margin: auto;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.card-title{
+  color: var(--on-background);
+}
+
+.btn-delete{
+  background-color: var(--on-background);
+  color: var(--background);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+  
+}
+
+.btn-delete:hover{
+  background-color: var(--background);
+  color: var(--on-background);
+  transition: all 0.3s ease-in-out;
+}
+
+
+main {
+  margin: 0 auto;
+  padding: 32px 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.notes-list {
+  text-align: center;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  gap: 3rem;
+  padding: 16px 8px;
+}
+
+.note-item {
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--on-background);
+  background-color: transparent;
+}
+
+.note-item a{
+  text-decoration-line: underline;
+}
+
+.tidak p{
+  color: var(--on-background);
+  transition: all ease-in-out 0.5s;
+  padding: 30px;
+ }
+
+.action {
+  display: flex;
+  align-items: center;
+  font-size: 200px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--on-background);
+  color: var(--background);
+  padding: 8px;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+
+/*tambah notes */
+.input .judul {
+  padding: 20px;
+  width: 100%;
+  background-color: var(--on-background);
+  border: 0;
+  color: var(--background);
+  font-size: 30px;
+  padding: 8px 0;
+  border-radius: 10px;
+}
+
+.judul::placeholder {
+  color: var(--background);
+  text-align: center;
+
+}
+
+.input .catatan {
+  margin-top: 10px;
+  width: 100%;
+  background-color: var(--on-background);
+  border: 0;
+  color: var(--background);
+  font-size: 20px;
+  padding: 20px;
+  min-height: 500px;
+  border-radius: 10px;
+}
+
+.catatan::placeholder{
+  color: var(--background);
+  text-align: center;
+
+}
+
+[data-placeholder]:empty::before {
+  content: attr(data-placeholder);
+  color: var(--background)
+}
+
+/* search-bar */
+.search-bar input {
+  margin: 16px 0;
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+  border: 1px solid var(--on-background);
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  color: var(--on-background);
+}
+
+.search-bar input::placeholder {
+  color: var(--on-background);
+}
+
+/* tema */
+.toggle-theme, .toggle-locale {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--on-background);
+  display: flex;
+  align-items: center;
+  margin: 0 16px;
+}
+
+.toggle-theme {
+  font-size: 36px;
+}
+
+.toggle-locale {
+  font-size: 28px;
+}
+
+
+.button-logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 0;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--on-background);
+  padding: 20px;
+  align-items: center;
+}
+
+
